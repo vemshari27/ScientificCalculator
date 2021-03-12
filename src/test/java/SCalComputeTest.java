@@ -1,4 +1,4 @@
-import iiitb.org.ScientificCalculator.ScientificCalculator;
+import iiitb.org.ScientificCalculator.entities.ScientificCalculator;
 import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;

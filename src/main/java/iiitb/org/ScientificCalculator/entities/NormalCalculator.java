@@ -1,4 +1,4 @@
-package iiitb.org.ScientificCalculator;
+package iiitb.org.ScientificCalculator.entities;
 
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;

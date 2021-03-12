@@ -1,13 +1,11 @@
-package iiitb.org.ScientificCalculator;
+package iiitb.org.ScientificCalculator.entities;
 
 import net.objecthunter.exp4j.ExpressionBuilder;
 import net.objecthunter.exp4j.operator.Operator;
 
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.function.UnaryOperator;
 
-public class ScientificCalculator implements Calculator{
+public class ScientificCalculator implements Calculator {
     private double acc_val;
     private NormalCalculator ncal;
 
