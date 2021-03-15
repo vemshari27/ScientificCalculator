@@ -2,12 +2,15 @@ package iiitb.org.ScientificCalculator.entities;
 
 import net.objecthunter.exp4j.ExpressionBuilder;
 import net.objecthunter.exp4j.operator.Operator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Scanner;
 
 public class ScientificCalculator implements Calculator {
     private double acc_val;
     private NormalCalculator ncal;
+    private Logger logger = LogManager.getLogger(ScientificCalculator.class);
 
     public ScientificCalculator(int acc_val) {
         this.acc_val = acc_val;
@@ -31,6 +34,7 @@ public class ScientificCalculator implements Calculator {
     }
 
     public double squareRoot(double inp) throws ArithmeticException{
+        logger.info("Computing squareRoot function");
         if(inp < 0){
             throw new ArithmeticException("Square root of a negative number found");
         }
@@ -38,6 +42,7 @@ public class ScientificCalculator implements Calculator {
     }
 
     public double factorial(double inp)throws ArithmeticException{
+        logger.info("Computing factorial function");
         if(inp < 0){
             throw new ArithmeticException("Factorial of a negative number found");
         }
@@ -49,6 +54,7 @@ public class ScientificCalculator implements Calculator {
     }
 
     public double ln(double inp)throws ArithmeticException{
+        logger.info("Computing log_e function");
         if(inp <= 0){
             throw new ArithmeticException("log of a non positive number found");
         }
@@ -56,6 +62,7 @@ public class ScientificCalculator implements Calculator {
     }
 
     public double power(double inp1, double inp2)throws ArithmeticException{
+        logger.info("Computing power function");
         if(inp1 == inp2 && inp1 == 0){
             throw new ArithmeticException("0^0 found");
         }
@@ -70,6 +77,7 @@ public class ScientificCalculator implements Calculator {
 
     @Override
     public double compute_expression(String xpr) throws ArithmeticException{
+        logger.info("Computing compute_expression function");
 //        xpr= xpr.replaceAll("\\(","<");
 //        xpr = xpr.replaceAll("\\)",">");
 //        xpr = xpr.replaceAll("\\^","_");
