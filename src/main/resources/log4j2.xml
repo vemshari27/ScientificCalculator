@@ -2,10 +2,10 @@
 <Configuration status="INFO">
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%F] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{dd/MMM/yyy:HH:mm:ss SSS} [%F] [%level] %logger{36} \- %msg%n"/>
         </Console>
-        <File name="FileAppender" fileName="scal_app.log" immediateFlush="true" append="true">
-            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%F] %-5level %logger{36} - %msg%n"/>
+        <File name="FileAppender" fileName="scal_app3.log" immediateFlush="true" append="true">
+            <PatternLayout pattern="%d{dd/MMM/yyy:HH:mm:ss SSS} [%F] [%level] %logger{40} %msg%n"/>
         </File>
     </Appenders>
     <Loggers>

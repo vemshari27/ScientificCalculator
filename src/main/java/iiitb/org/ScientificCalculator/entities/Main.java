@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     private static Logger logger = LogManager.getLogger(Main.class);
     public void app(int x) {
-        logger.info("Using Web App");
+        logger.info("CLI Version");
         Scanner cli_inp = new Scanner(System.in);
         ScientificCalculator scal = new ScientificCalculator(0);
 

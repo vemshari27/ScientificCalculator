@@ -1,26 +1,26 @@
-// pipeline {
-//    agent any
-//
-//    stages {
-//       stage('Build') {
-//         steps {
-//             sh "mvn verify"
-//         }
-//       }
-//       stage('Deploy') {
-//       steps {
-//         script {
-//           step([
-//             $class: "RundeckNotifier",
-//             includeRundeckLogs: true,
-//             rundeckInstance: "rundeck_local",
-//             jobId: "ad0bc5a7-a848-4512-851b-5d25e216530f",
-//             shouldWaitForRundeckJob: true,
-//             shouldFailTheBuild: true,
-//             tailLog: true
-//           ])
-//         }
-//       }
-//     }
-//    }
-// }
+pipeline {
+   agent any
+
+   stages {
+      stage('Build') {
+        steps {
+            sh "mvn verify"
+        }
+      }
+      stage('Deploy') {
+      steps {
+        script {
+          step([
+            $class: "RundeckNotifier",
+            includeRundeckLogs: true,
+            rundeckInstance: "rundeck_local",
+            jobId: "ad0bc5a7-a848-4512-851b-5d25e216530f",
+            shouldWaitForRundeckJob: true,
+            shouldFailTheBuild: true,
+            tailLog: true
+          ])
+        }
+      }
+    }
+   }
+}

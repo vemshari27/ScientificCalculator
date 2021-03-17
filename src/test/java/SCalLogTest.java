@@ -31,10 +31,16 @@ public class SCalLogTest {
     }
 
     @Test(expected = ArithmeticException.class)
-    public void non_negativeLogTest() {
+    public void non_positiveLogTest() {
         System.out.println("Testing for a negative root.");
         ScientificCalculator scal = new ScientificCalculator(0);
-        scal.squareRoot(0);
-        scal.squareRoot(-5);
+        scal.ln(0);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void non_positiveLogTest1() {
+        System.out.println("Testing for a negative root.");
+        ScientificCalculator scal = new ScientificCalculator(0);
+        scal.ln(-5);
     }
 }
